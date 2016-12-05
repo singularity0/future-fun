@@ -1,0 +1,93 @@
+ {
+	"featured" : [
+			{"game_id":509,"foreign_id":"164","game_code":"18","machine_id":"49","hands":"0","denominations":null,"game_name":"PayDirt!"},
+
+			{"game_id":546,"foreign_id":"6","game_code":"4","machine_id":"1","hands":"0","denominations":null,"game_name":"European Roulette"},
+
+			{"game_id":441,"foreign_id":"119","game_code":"18","machine_id":"32","hands":"0","denominations":null,"game_name":"Achilles"},
+
+
+			{"game_id":458,"foreign_id":"149","game_code":"18","machine_id":"206","hands":"0","denominations":null,"game_name":"Crazy Vegas"},
+
+
+			{"game_id":534,"foreign_id":"182","game_code":"18","machine_id":"61","hands":"0","denominations":null,"game_name":"Triple Twister"},
+
+
+			{"game_id":457,"foreign_id":"159","game_code":"18","machine_id":"43","hands":"0","denominations":null,"game_name":"Coyote Cash"},
+
+			{"game_id":631,"foreign_id":"230","game_code":"18","machine_id":"153","hands":"0","denominations":null,"game_name":"Football Frenzy!"},
+
+			{"game_id":525,"foreign_id":"166","game_code":"18","machine_id":"51","hands":"0","denominations":null,"game_name":"T-Rex"},
+
+			{"game_id":407,"foreign_id":"1","game_code":"0","machine_id":"0","hands":"0","denominations":null,"game_name":"Blackjack"},
+
+			{"game_id":518,"foreign_id":"82","game_code":"18","machine_id":"1","hands":"0","denominations":null,"game_name":"Ronin"},
+
+			{"game_id":601,"foreign_id":"226","game_code":"18","machine_id":"212","hands":"0","denominations":null,"game_name":"Santastic!"},
+
+			{"game_id":515,"foreign_id":"88","game_code":"18","machine_id":"20","hands":"0","denominations":null,"game_name":"Red Sands"}
+	],
+	"slots" : [
+			{"game_id":473,"foreign_id":"178","game_code":"18","machine_id":"67","hands":"0","denominations":null,"game_name":"Golden Lotus"},
+
+			{"game_id":527,"foreign_id":"174","game_code":"18","machine_id":"60","hands":"0","denominations":null,"game_name":"Texan Tycoon"},
+
+			{"game_id":458,"foreign_id":"149","game_code":"18","machine_id":"206","hands":"0","denominations":null,"game_name":"Crazy Vegas"},
+
+			{"game_id":463,"foreign_id":"126","game_code":"18","machine_id":"23","hands":"0","denominations":null,"game_name":"Enchanted Garden"},
+
+			{"game_id":534,"foreign_id":"182","game_code":"18","machine_id":"61","hands":"0","denominations":null,"game_name":"Triple Twister"},
+
+			{"game_id":525,"foreign_id":"166","game_code":"18","machine_id":"51","hands":"0","denominations":null,"game_name":"T-Rex"},
+
+			{"game_id":509,"foreign_id":"164","game_code":"18","machine_id":"49","hands":"0","denominations":null,"game_name":"PayDirt!"},
+			
+			{"game_id":457,"foreign_id":"159","game_code":"18","machine_id":"43","hands":"0","denominations":null,"game_name":"Coyote Cash"},
+
+			{"game_id":502,"foreign_id":"179","game_code":"18","machine_id":"65","hands":"0","denominations":null,"game_name":"Naughty Or Nice?"},
+
+			{"game_id":475,"foreign_id":"128","game_code":"18","machine_id":"19","hands":"0","denominations":null,"game_name":"Green Light"},
+
+			{"game_id":511,"foreign_id":"209","game_code":"18","machine_id":"125","hands":"0","denominations":null,"game_name":"Polar Explorer"},
+
+			{"game_id":503,"foreign_id":"213","game_code":"18","machine_id":"130","hands":"0","denominations":null,"game_name":"Ninja Star"}
+
+	],
+
+	"card" : [
+			{"game_id":407,"foreign_id":"1","game_code":"0","machine_id":"0","hands":"0","denominations":null,"game_name":"Blackjack"},
+
+			{"game_id":412,"foreign_id":"108","game_code":"0","machine_id":"1","hands":"0","denominations":null,"game_name":"Pontoon"},
+
+			{"game_id":409,"foreign_id":"28","game_code":"0","machine_id":"2","hands":"0","denominations":null,"game_name":"Face Up 21"},
+
+			{"game_id":413,"foreign_id":"30","game_code":"0","machine_id":"4","hands":"0","denominations":null,"game_name":"Super 21"},
+
+			{"game_id":410,"foreign_id":"31","game_code":"0","machine_id":"5","hands":"0","denominations":null,"game_name":"Match Play 21"},
+
+			{"game_id":411,"foreign_id":"131","game_code":"0","machine_id":"6","hands":"0","denominations":null,"game_name":"Blackjack + Perfect Pairs"},
+
+			{"game_id":408,"foreign_id":"141","game_code":"0","machine_id":"7","hands":"0","denominations":null,"game_name":"European Blackjack"},
+
+
+			{"game_id":404,"foreign_id":"2","game_code":"1","machine_id":"0","hands":"0","denominations":null,"game_name":"Baccarat"},
+
+			{"game_id":440,"foreign_id":"4","game_code":"3","machine_id":"0","hands":"0","denominations":null,"game_name":"Pai Gow Poker"}
+
+
+	],
+
+	"table" : [
+			{"game_id":546,"foreign_id":"6","game_code":"4","machine_id":"1","hands":"0","denominations":null,"game_name":"European Roulette"},
+
+			{"game_id":420,"foreign_id":"16","game_code":"10","machine_id":"0","hands":"0","denominations":null,"game_name":"Craps"},
+
+			{"game_id":545,"foreign_id":"5","game_code":"4","machine_id":"0","hands":"0","denominations":null,"game_name":"American Roulette"},
+
+			{"game_id":412,"foreign_id":"108","game_code":"0","machine_id":"1","hands":"0","denominations":null,"game_name":"Pontoon"},
+
+			{"game_id":411,"foreign_id":"131","game_code":"0","machine_id":"6","hands":"0","denominations":null,"game_name":"Blackjack + Perfect Pairs"},
+
+			{"game_id":404,"foreign_id":"2","game_code":"1","machine_id":"0","hands":"0","denominations":null,"game_name":"Baccarat"}
+	]
+}
