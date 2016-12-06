@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Games Challenge</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <script type="text/javascript" src="./jquery-3.1.1.min.js">
+    </script>
+</head>
+
+<body>
+
+    <!--<nav class="navigation">
+        <div id="nav-content">
+            <ul id="main-menu">
+                <li>
+                    <a href="">Featured Games</a>
+                </li>
+                <li>
+                    <a href="">Slot Games</a>
+                </li>
+                <li>
+                    <a href="">Card Games</a>
+                </li>
+                <li>
+                    <a href="">Table Games</a>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+    <article id="featured">
+        <div class="normal_block">
+            <div class="nb_title">
+                <h1>Featured Games</h1>
+            </div>
+        </div>
+        <div class="nb_cont">
+            <div class="nb_category">
+                <div class="game_item">
+                    <a href="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" class="gi_title">40 Football</a>
+                    <div class="gi_image">
+                        <img itemprop="image" src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="Football">
+                        <a href="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" class="gi_overlay">
+                            <span>Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="slot"></article>
+    <article id="card"></article>
+    <article id="table"></article>
+    <!--<script src="../games(1).json"></script>-->
+    <script>
+        var someVar = 4;
+        console.log(someVar);
+
+        function loadJSON(callback) {
+
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', '../games(1).json', true);
+            xobj.onreadystatechange = function() {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                    callback(xobj.responseText);
+                }
+            };
+            xobj.send(null);
+        }
+
+        function init() {
+            loadJSON(function(response) {
+                // Parse JSON string into object
+                var actual_JSON = JSON.parse(response);
+                var url = "http://cacheimg.casinomidas.com/images/www/games/minipods/";
+                var $featured
+                $('#featured').on('click', function() {
+                        $('#featured').append($('<div class="normal_block"><div class="nb_title"><h1>Featured Games<\/h1><\/div><\/div>'))
+                            .append('<div class="nb_cont"><div class="nb_category">');
+
+                        actual_JSON.featured.forEach(function(item) {
+                            // console.log(actual_JSON.featured.)
+                            $('#featured').append('<div class="game_item">')
+                                .append('<a href="' + url + 'footballfrenzy' + '-minipod.jpg" class="gi_title">40 Football FR</a>')
+                                .append('<div class="gi_image"><img itemprop = "image" src ="' + url + 'footballfrenzy' + '-minipod.jpg" alt = "Football Frenzy"><a href = "" class = "gi_overlay"><span>Play Now</span></a></div></div>');
+                        })
+
+                        $('#featured').append('</div></div>');
+
+                    })
+                    // console.log(featured.html)
+                    // console.log(actual_JSON.card);
+            });
+        }
+        init();
+    </script>
+</body>
+
+</html>

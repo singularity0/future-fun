@@ -1,0 +1,276 @@
+/*.nb_title .nb_nav {
+    display: block;
+    float: right;
+    text-decoration: none;
+    border: 1px solid #d8d8d8;
+    height: 24px;
+    line-height: 24px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #686c6e;
+    text-shadow: 1px 1px 0px #ffffff;
+    font-size: 12px;
+    padding: 0 5px;
+    margin: 0 0 0 0;
+}*/
+
+
+/*html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}*/
+
+
+/*body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}*/
+
+
+/*article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}*/
+
+
+/*.normal_block {
+    padding: 0 0 20px 0;
+}*/
+
+
+/*div {
+    display: block;
+}*/
+
+
+/*.normal_block .nb_title {
+    overflow: hidden;
+    padding: 0 0 5px 0;
+}*/
+
+
+/*@media only screen and (max-width: 960px) {
+    .homepage_game_slider li,
+    section,
+    aside,
+    .nb_category,
+    #game_window {
+        width: 100%;
+    }
+}*/
+
+
+/*.nb_category {
+    width: 630px;
+    overflow: hidden;
+}*/
+
+
+/*@media only screen and (max-width: 768px) {
+    .game_item {
+        box-sizing: border-box;
+        margin: 1%;
+        width: 31%;
+    }
+}*/
+
+
+/*@media only screen and (max-width: 960px) {
+    .game_item {
+        width: 23%;
+        margin: 1%;
+        box-sizing: border-box;
+    }
+}*/
+
+.game_item {
+    background: palegreen;
+    border-radius: 4px;
+    float: left;
+    padding: 6px 6px 0px 6px;
+    border-bottom: 3px solid mediumpurple;
+    margin: 4px;
+}
+
+@media only screen and (max-width: 960px) {
+    .game_item .gi_image,
+    .game_item .gi_image img,
+    #footer_cols .fc_col .fc_game .fc_img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*.game_item .gi_image {
+    width: 190px;
+    height: 135px;
+    position: relative;
+}*/
+
+@media only screen and (max-width: 960px) {
+    .game_item .gi_image,
+    .game_item .gi_image img,
+    #footer_cols .fc_col .fc_game .fc_img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .game_item .gi_image .gi_overlay {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.game_item .gi_image .gi_overlay {
+    width: 190px;
+    height: 135px;
+    position: absolute;
+    z-index: 50;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: none;
+}
+
+.game_item .gi_image .gi_overlay span {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-bottom: 2px solid #fb7900;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #d18806;
+    padding: 0 8px 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px 0 0 -35px;
+}
+
+
+/*@media only screen and (max-width: 960px) {*/
+
+.game_item .gi_image .gi_overlay {
+    width: 100%;
+    height: 100%;
+    /*}*/
+}
+
+.game_item .gi_title {
+    display: block;
+    color: #686c6e;
+    text-shadow: 1px 1px 0px #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 36px;
+}
+
+.normal_block .nb_cont {
+    background: #ffffff;
+    padding: 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+/*#main-menu {
+    float: left
+}*/
+
+ul {
+    list-style: none;
+    display: block;
+}
+
+
+/*#main_menu li {
+    float: left;
+}*/
+
+#nav-content {
+    width: 950px;
+}
