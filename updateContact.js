@@ -10,5 +10,5 @@ function updateContacts(connectionString, query, validator)
     for db accesed via connectionString
         execude the query
     then if validator is provide, check if validation  passes
-    if ok => return the number of raws affected
+    if ok =>  return the number of raws affected
     else print error and handle error
