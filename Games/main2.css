@@ -22,6 +22,21 @@ td {
     padding: 8px;
 }
 
+.play {
+    position: absolute;
+    display: none;
+    top: 50%;
+    width: 40px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    z-index: 100
+}
+
+.galleryItem:hover .play {
+    display: block
+}
+
 tr:nth-child(even) {
     background-color: #f2f2f2
 }
@@ -39,7 +54,7 @@ tr:nth-child(even) {
 }
 
 .galleryItem h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .galleryItem img {
@@ -50,6 +65,7 @@ tr:nth-child(even) {
 }
 
 .galleryItem {
+    position: relative;
     color: #797478;
     font: 10px/1.5 Verdana, Helvetica, sans-serif;
     float: left;
