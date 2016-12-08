@@ -11,9 +11,9 @@
     <div class="menu">
         <table>
             <td id="featured" class="blink">Featured Games</td>
-            <td class="blink">Slots Games</td>
-            <td class="blink">Card Games</td>
-            <td class="blink">Table Games</td>
+            <td id="slots" class="blink">Slots Games</td>
+            <td id="card" class="blink">Card Games</td>
+            <td id="table" class="blink">Table Games</td>
         </table>
 
     </div>
@@ -26,8 +26,8 @@
     <script id="game-template" type="text/x-handlebars-template">
 
         <div class="galleryItem">
-            <h3>Hiya{{onClickParams.game_name}}</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
+            <h3>{{gameName}}</h3>
+            <a href="#"><img src="{{gameUrl}}" alt="" /></a>
             <div class="play">
                 <img src="http://cdn1.iconfinder.com/data/icons/flavour/button_play_blue.png" />
             </div>
