@@ -62,13 +62,24 @@ function populate(context) {
     var theCompiledHtml = gameTemplate(context);
 
     $(".container").append(theCompiledHtml);
+
+    $(".galleryItem:last-of-type").on('click', function() {
+        openGame(context.gameName, context.gameCode, context.gameMachineID, context.gameDenomination, context.gameHands);
+    })
+}
+
+function openGame(game_name, game_code, machine_id, denominations, hands) {
+    console.log(game_name);
+    console.log(game_code);
+    console.log(machine_id);
+    console.log(denominations);
+    console.log(hands);
 }
 
 function onClickParams(game = actual_JSON['featured'][1]) {
 
     var gameNameClean = clearUppercaseAndSymbols(game.game_name);
     var gameUrl = appendResultToUrl(gameNameClean);
-
 
     return {
         gameName: game.game_name,
