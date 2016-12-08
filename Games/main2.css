@@ -10,8 +10,8 @@ table {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid linen;
+    border-radius: 15px;
     background-color: lightcyan;
 }
 
@@ -20,7 +20,27 @@ td {
     border: none;
     text-align: center;
     padding: 8px;
+    color: whitesmoke;
 }
+
+.blink_me {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+
+/*@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}*/
+
+
+/*@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}*/
 
 .play {
     position: absolute;
@@ -37,8 +57,8 @@ td {
     display: block
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2
+tr {
+    background-color: mediumvioletred
 }
 
 .container {
@@ -48,13 +68,14 @@ tr:nth-child(even) {
 }
 
 .galleryItem {
-    color: #797478;
+    color: white;
     font: 10px/1.5 Verdana, Helvetica, sans-serif;
     float: left;
 }
 
 .galleryItem h3 {
     text-transform: capitalize;
+    color: antiquewhite;
 }
 
 .galleryItem img {
@@ -71,6 +92,13 @@ tr:nth-child(even) {
     float: left;
     width: 16%;
     margin: 2% 2% 50px 2%;
+}
+
+body {
+    background-image: url(https://image.shutterstock.com/display_pic_with_logo/1884704/490095196/stock-vector-cristmas-background-with-shining-light-texture-show-background-shining-disco-party-design-490095196.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: ;*/
 }
 
 @media only screen and (max-width: 940px),
@@ -124,3 +152,92 @@ only screen and (max-device-width: 320px) {
         font-size: 18px;
     }
 }
+
+
+/* @group Blink */
+
+.blink {
+    -webkit-animation: blink .75s linear infinite;
+    -moz-animation: blink .75s linear infinite;
+    -ms-animation: blink .75s linear infinite;
+    -o-animation: blink .75s linear infinite;
+    animation: blink .75s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* @end */
