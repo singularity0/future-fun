@@ -12,17 +12,17 @@ function loadJSON(callback) {
     xobj.send(null);
 }
 
-function init() {
+function getLoadedJson() {
     loadJSON(function(response) {
         // Parse JSON string into object
         var actual_JSON = JSON.parse(response);
 
         getGameName(actual_JSON);
-        console.log(onClickParams(game = actual_JSON['featured'][0]).gameMachineID)
+        //console.log(onClickParams(game = actual_JSON['featured'][0]).gameMachineID)
     })
 }
 
-init();
+getLoadedJson();
 
 function getGameName(actual_JSON) {
     return actual_JSON['featured'].forEach(function(item) {
@@ -46,7 +46,7 @@ function appendResultToUrl(entry, url = 'http://cacheimg.casinomidas.com/images/
 
 // console.log(appendResultToUrl('ronin'));
 
-var onClickParams = function getOnGameClickElements(game = actual_JSON['featured'][0]) {
+var onClickParams = function(game = actual_JSON['featured'][0]) {
 
     // console.log(game.game_name);
     return {
@@ -58,4 +58,16 @@ var onClickParams = function getOnGameClickElements(game = actual_JSON['featured
     }
 }
 
-// console.log(onClickParams().gameName);
+function populate(onClickParams) {
+
+    var gameTemplateScript = $("#game-template").html();
+
+    var gameTemplate = Handlebars.compile(gameTemplateScript);
+
+    var theCompiledHtml = gameTemplate(onClickParams.game_name);
+
+    $(".container").html(theCompiledHtml);
+}
+
+$("#featured").on('click', populate)
+console.log('end');

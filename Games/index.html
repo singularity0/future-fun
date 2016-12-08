@@ -3,16 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Casino Games</title>
     <link rel="stylesheet" type="text/css" href="main2.css">
-    <script src="./readJson.js">
-    </script>
 </head>
 
 <body>
     <div class="menu">
         <table>
-            <td class="blink">Featured Games</td>
+            <td id="featured" class="blink">Featured Games</td>
             <td class="blink">Slots Games</td>
             <td class="blink">Card Games</td>
             <td class="blink">Table Games</td>
@@ -21,46 +19,27 @@
     </div>
 
 
-
     <div class="container">
 
-        <div class="galleryItem">
+    </div>
 
-            <h3>Title</h3>
+    <script id="game-template" type="text/x-handlebars-template">
+
+        <div class="galleryItem">
+            <h3>Hiya{{onClickParams.game_name}}</h3>
             <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
             <div class="play">
                 <img src="http://cdn1.iconfinder.com/data/icons/flavour/button_play_blue.png" />
             </div>
         </div>
-        <!--
-        <div class="galleryItem">
-            <h3>Title</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
-        </div>
 
-        <div class="galleryItem">
-            <h3>Title</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
-        </div>
+    </script>
 
-        <div class="galleryItem">
-            <h3>Title</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
-        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 
-        <div class="galleryItem">
-            <h3>Title</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
-        </div>
-
-        <div class="galleryItem">
-            <h3>Title</h3>
-            <a href="#"><img src="http://cacheimg.casinomidas.com/images/www/games/minipods/footballfrenzy-minipod.jpg" alt="" /></a>
-        </div>-->
-
-
-    </div>
-
+    <script src="./readJson.js"></script>
+    <link rel="stylesheet" type="text/css" href="main2.css">
 </body>
 
 </html>
