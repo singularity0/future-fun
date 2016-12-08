@@ -1,0 +1,193 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+div.menu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 5%;
+    margin: 30px;
+}
+
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    width: 20%;
+    font-family: fantasy
+}
+
+div.menu a:hover {
+    background-color: #777;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.galleryItem {
+    color: #797478;
+    font: 10px/1.5 Verdana, Helvetica, sans-serif;
+    float: left;
+}
+
+.galleryItem h3 {
+    text-transform: uppercase;
+}
+
+.galleryItem img {
+    max-width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.galleryItem {
+    color: #797478;
+    font: 10px/1.5 Verdana, Helvetica, sans-serif;
+    float: left;
+    width: 16%;
+    margin: 2% 2% 50px 2%;
+}
+
+@media only screen and (max-width: 940px),
+only screen and (max-device-width: 940px) {
+    .galleryItem {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width: 720px) {
+    .galleryItem {
+        width: 29.33333%;
+    }
+}
+
+@media only screen and (max-width: 940px),
+only screen and (max-device-width: 940px) {
+    .galleryItem {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width: 720px) {
+    .galleryItem {
+        width: 29.33333%;
+    }
+}
+
+@media only screen and (max-width: 530px),
+only screen and (max-device-width: 530px) {
+    .galleryItem {
+        width: 46%;
+    }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width: 320px) {
+    .galleryItem {
+        width: 96%;
+    }
+    .galleryItem img {
+        width: 96%;
+    }
+    .galleryItem h3 {
+        font-size: 18px;
+    }
+    .galleryItem p,
+    {
+        font-size: 18px;
+    }
+}
