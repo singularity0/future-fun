@@ -18,6 +18,7 @@ function init() {
         var actual_JSON = JSON.parse(response);
 
         $("#featured").on('click', function(featured) {
+            $(".container").html("");
             var featured = actual_JSON['featured']
             featured.forEach(function(item) {
                 var itemDetails = onClickParams(item);
@@ -26,6 +27,7 @@ function init() {
         })
 
         $("#slots").on('click', function(featured) {
+            $(".container").html("");
             var featured = actual_JSON['slots']
             featured.forEach(function(item) {
                 var itemDetails = onClickParams(item);
@@ -34,6 +36,7 @@ function init() {
         })
 
         $("#card").on('click', function(featured) {
+            $(".container").html("");
             var featured = actual_JSON['card']
             featured.forEach(function(item) {
                 var itemDetails = onClickParams(item);
@@ -42,6 +45,7 @@ function init() {
         })
 
         $("#table").on('click', function(featured) {
+            $(".container").html("");
             var featured = actual_JSON['table']
             featured.forEach(function(item) {
                 var itemDetails = onClickParams(item);
@@ -54,11 +58,9 @@ function init() {
 function populate(context) {
 
     var gameTemplateScript = $("#game-template").html();
-
-    var gameTemplate = Handlebars.compile(gameTemplateScript);
-
+    var gameTemplate = Handlebars.compile(gameTemplateScript)
     var theCompiledHtml = gameTemplate(context);
-    console.log(context.gameName);
+
     $(".container").append(theCompiledHtml);
 }
 
@@ -82,7 +84,7 @@ init();
 
 function clearUppercaseAndSymbols(entry) {
 
-    var replaceSpecialChars = entry.replace(/[^0-9a-z]/gi, '');
+    var replaceSpecialChars = entry.replace(/[^0-9a-z+]/gi, '');
     var replaceCapiralLetters = replaceSpecialChars.toLowerCase();
     return replaceCapiralLetters;
 }

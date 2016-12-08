@@ -73,9 +73,11 @@ tr {
     float: left;
 }
 
-.galleryItem h3 {
+.galleryItem h4 {
     text-transform: capitalize;
     color: antiquewhite;
+    /*overflow: hidden;*/
+    /*overflow-x: auto;*/
 }
 
 .galleryItem img {
@@ -144,13 +146,13 @@ only screen and (max-device-width: 320px) {
     .galleryItem img {
         width: 96%;
     }
-    .galleryItem h3 {
+    .galleryItem h4 {
         font-size: 18px;
     }
-    .galleryItem p,
+    /*.galleryItem p,
     {
         font-size: 18px;
-    }
+    }*/
 }
 
 
