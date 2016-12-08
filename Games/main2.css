@@ -1,112 +1,29 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-div.menu {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
-    margin: 5%;
-    margin: 30px;
-}
-
-div.menu a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 1%;
-    text-decoration: none;
-    width: 20%;
+.menu {
+    overflow-x: auto;
     font-family: fantasy
 }
 
-div.menu a:hover {
-    background-color: #777;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+
+th,
+td {
+    border: none;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
 }
 
 .container {
