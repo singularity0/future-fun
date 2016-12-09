@@ -1,0 +1,92 @@
+//  Write a pseudo of “UpdateContact” function
+// what arguments it will get?
+// What will it return?
+// Describe in high level the steps this function will do.
+
+==================================================================
+UpdateContact(connection string, query)
+
+assign(to a var) connection object to use for the connection (like new ActiveXObject("adodb.connection"))
+assign(to a var) the connection string
+
+open a connection == pass the connection string to the object
+
+assign(to a var) connection object to use for the response (like new ActiveXObject("adodb.connection"))
+pass to the response object the following params: 1.query and 2.connection string
+
+close the response object
+
+close the connection
+
+rs.close;
+connection.close; 
+
+/Note: This function does not return anything. In case it needs to be chained it may return the connection for someone else to use, but this is way too complicated and exotic and normally I guess not a good option/
+==================================================================
+function updateContacts(connectionString/location, query / data, validator)
+
+If coupled with a particular db, check
+	if db exists
+	if connection string is good
+	if user requesting is authorized
+check
+	if query is valid and request type is Update
+	there is a valid url
+
+create Xhrhttp request / ajax request
+
+Info for ajax request is:
+	/if coupled: for db accesed via connectionString /
+	/if coupled: pass requested query/
+	pass requested request type (i.e. PUT)
+	towards the specified location
+	if repsonse status code is valid (i.e. 2XX) or DB operation request performed
+		do smt  (i.e. return the numebr of rows affected. append result to some element)
+	else if response status code is bad (i.e. 4XX)
+		handle error (like alert, console.log "there was an error 400")
+	else
+		handle error( alert/console.log "system admin needed to manage.")
+if XMLHttpRequest used
+	XMLHttpRequest. send()
+close the connection
+
+==================================================================
+
+Description/Notes:
+The function to update the contacts takes the following parameters:
+	/In case the we need to couple with the database in the function:/
+			- connectionString  //normally in a project/app this is not needed as the function is being "required" or referred by some module and the connection string is already known or validated. 
+			- query - the query itself, containing the CRUD operation. /note: it is an assumption that we have or not the CRUD to allow PUT operations only/
+			- validator: we may/or not/ provide a validator, checking whatever is needed like request params, database types/params, response params, eligibility of the user, returned data content
+	/In case the app architecture is good this function should take only dBlocation/url, and it would be rather the cotroller/s that calls it should be responsible for calling the proper function for the neded operation. /
+
+If theres is a complex logic for reqest/responses we may want to check the query before accessing the Db. Such a layer may be helpful to protect the db from too many/too much requests/too often sent requests/attempts to inject malicious code etc.
+
+We may want to check if the url we request is valid. This might in some cases be faster than connecting to the db directly and leaving it to the db to reject/handle invalid location attmpts.
+
+Then we need to create the http request in case the app uses http for requesting data. Apps would rarely read data from db with a filereader or similer library/function since we need to have this operation be done assync. Using Ajax might be a good option for acessing a db on the local machine.
+
+With $.ajax we do not need to close the conn as it is being closed when function ends.
+==================================================================
+example: 
+open script tag
+	request $.ajax
+		pass url
+		pass context: document.body
+		function to execute if above is successfull
+			update some selecment by appending some text to it
+==================================================================
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+

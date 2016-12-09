@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            
+            // Workspace relative or absolute path to the program.
+            "program": "${workspaceRoot}/app.js",
+
+            // Use this if you want to debug cars-scraper application
+            // "program": "${workspaceRoot}/cars-scraper/app.js",
+
+            // Workspace relative or absolute path to the working directory of 
+            // the program being debugged. Default is the current workspace.
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Process",
+            "port": 5858
+        }
+    ]
+}
