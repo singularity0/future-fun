@@ -1,8 +1,13 @@
+var jsonLocation = '../games(1).json',
+    clickables = ["featured", "slots", "card", "table"],
+    galleryUrl = 'http://cacheimg.casinomidas.com/images/www/games/minipods/',
+    urlending = '-minipod.jpg';
+
 function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', '../games(1).json', true);
+    xobj.open('GET', jsonLocation, true);
     xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -17,39 +22,21 @@ function init() {
 
         var actual_JSON = JSON.parse(response);
 
-        $("#featured").on('click', function(featured) {
-            $(".container").html("");
-            var featured = actual_JSON['featured']
-            featured.forEach(function(item) {
-                var itemDetails = onClickParams(item);
-                populate(itemDetails);
-            })
-        })
+        var menuClickableSections = clickables
 
-        $("#slots").on('click', function(featured) {
-            $(".container").html("");
-            var featured = actual_JSON['slots']
-            featured.forEach(function(item) {
-                var itemDetails = onClickParams(item);
-                populate(itemDetails);
-            })
-        })
+        menuClickableSections.forEach(function(clickItem) {
+            var clickItemId = '#' + clickItem;
+            $clickItemElement = $(clickItemId);
+            $clickItemElement.on('click', function() {
 
-        $("#card").on('click', function(featured) {
-            $(".container").html("");
-            var featured = actual_JSON['card']
-            featured.forEach(function(item) {
-                var itemDetails = onClickParams(item);
-                populate(itemDetails);
-            })
-        })
+                $(".container").html("");
 
-        $("#table").on('click', function(featured) {
-            $(".container").html("");
-            var featured = actual_JSON['table']
-            featured.forEach(function(item) {
-                var itemDetails = onClickParams(item);
-                populate(itemDetails);
+                var category = actual_JSON[clickItem]
+
+                category.forEach(function(item) {
+                    var itemDetails = onClickParams(item);
+                    populate(itemDetails);
+                })
             })
         })
     })
@@ -76,10 +63,10 @@ function openGame(game_name, game_code, machine_id, denominations, hands) {
     console.log(hands);
 }
 
-function onClickParams(game = actual_JSON['featured'][1]) {
+function onClickParams(game) {
 
     var gameNameClean = clearUppercaseAndSymbols(game.game_name);
-    var gameUrl = appendResultToUrl(gameNameClean);
+    var gameUrl = appendResultToUrl(gameNameClean, galleryUrl, urlending);
 
     return {
         gameName: game.game_name,
@@ -100,7 +87,7 @@ function clearUppercaseAndSymbols(entry) {
     return replaceCapiralLetters;
 }
 
-function appendResultToUrl(entry, url = 'http://cacheimg.casinomidas.com/images/www/games/minipods/', urlending = '-minipod.jpg') {
+function appendResultToUrl(entry, url = galleryUrl, urlending = urlending) {
     let entireUrl = url + entry + urlending;
     return entireUrl;
 }
