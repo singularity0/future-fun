@@ -91,3 +91,7 @@ function appendResultToUrl(entry, url = galleryUrl, urlending = urlending) {
     let entireUrl = url + entry + urlending;
     return entireUrl;
 }
+
+$(document).ready(function() {
+    $("#featured").trigger("click");
+});
