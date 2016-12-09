@@ -1,0 +1,251 @@
+.menu {
+    overflow-x: auto;
+    font-family: fantasy
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    border: 1px solid linen;
+    border-radius: 15px;
+    background-color: lightcyan;
+}
+
+th,
+td {
+    border: none;
+    text-align: center;
+    padding: 8px;
+    color: whitesmoke;
+}
+
+.play {
+    position: absolute;
+    display: none;
+    top: 50%;
+    width: 40px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    z-index: 100
+}
+
+.galleryItem:hover .play {
+    display: block
+}
+
+tr {
+    background-color: mediumvioletred
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.galleryItem {
+    color: white;
+    font: 10px/1.5 Verdana, Helvetica, sans-serif;
+    float: left;
+}
+
+.galleryItem h4 {
+    text-transform: capitalize;
+    color: antiquewhite;
+    /*overflow: hidden;*/
+    /*overflow-x: auto;*/
+}
+
+.galleryItem img {
+    max-width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.galleryItem {
+    position: relative;
+    color: #797478;
+    font: 10px/1.5 Verdana, Helvetica, sans-serif;
+    float: left;
+    width: 16%;
+    margin: 2% 2% 50px 2%;
+}
+
+body {
+    background-image: url(https://image.shutterstock.com/display_pic_with_logo/1884704/490095196/stock-vector-cristmas-background-with-shining-light-texture-show-background-shining-disco-party-design-490095196.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: ;*/
+}
+
+@media only screen and (max-width: 940px),
+only screen and (max-device-width: 940px) {
+    .galleryItem {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width: 720px) {
+    .galleryItem {
+        width: 29.33333%;
+    }
+}
+
+@media only screen and (max-width: 940px),
+only screen and (max-device-width: 940px) {
+    .galleryItem {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width: 720px) {
+    .galleryItem {
+        width: 29.33333%;
+    }
+}
+
+@media only screen and (max-width: 530px),
+only screen and (max-device-width: 530px) {
+    .galleryItem {
+        width: 46%;
+    }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width: 320px) {
+    .galleryItem {
+        width: 96%;
+    }
+    .galleryItem img {
+        width: 96%;
+    }
+    .galleryItem h4 {
+        font-size: 18px;
+    }
+    /*.galleryItem p,
+    {
+        font-size: 18px;
+    }*/
+}
+
+
+/*.blink_me {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}*/
+
+
+/*@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}*/
+
+
+/*@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}*/
+
+
+/* @group Blink */
+
+
+/*.blink {
+    -webkit-animation: blink .75s linear infinite;
+    -moz-animation: blink .75s linear infinite;
+    -ms-animation: blink .75s linear infinite;
+    -o-animation: blink .75s linear infinite;
+    animation: blink .75s linear infinite;
+}
+*/
+
+
+/*@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+*/
+
+
+/* @end */

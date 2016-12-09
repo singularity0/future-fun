@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Casino Games</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="menu">
+        <table>
+            <td id="featured" class="blink">Featured Games</td>
+            <td id="slots" class="blink">Slots Games</td>
+            <td id="card" class="blink">Card Games</td>
+            <td id="table" class="blink">Table Games</td>
+        </table>
+
+    </div>
+
+
+    <div class="container">
+
+    </div>
+
+    <script id="game-template" type="text/x-handlebars-template">
+
+        <div class="galleryItem">
+            <h4>{{gameName}}</h4>
+            <a class="game-link" href="#"><img src="{{gameUrl}}" alt="" />
+                <div class="play">
+                    <img src="./button_play_blue.png" />
+                </div>
+            </a>
+        </div>
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+    <script src="./game-logic.js"></script>
+</body>
+
+</html>
