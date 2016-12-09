@@ -35,12 +35,17 @@ class Eagle extends FlyigAnimal {
     }
 }
 
-// let someDopphin = new Dolphin(3);
-// console.log(someDopphin.age);
-// someDopphin.swim()
-// someDopphin.sleep()
-// console.log('----');
-// let someEagle = new Eagle(2);
-// console.log(someEagle.age);
-// someEagle.sleep();
-// someEagle.fly();
+
+// quickTest();
+
+// function quickTest() {
+//     let someDopphin = new Dolphin(3);
+//     console.log(someDopphin.age);
+//     someDopphin.swim()
+//     someDopphin.sleep()
+//     console.log('----');
+//     let someEagle = new Eagle(2);
+//     console.log(someEagle.age);
+//     someEagle.sleep();
+//     someEagle.fly();
+// }
