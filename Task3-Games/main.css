@@ -136,6 +136,10 @@ only screen and (max-device-width: 320px) {
     }*/
 }
 
+.menu td {
+    cursor: pointer;
+}
+
 
 /*.blink_me {
     animation: blink-animation 1s steps(5, start) infinite;
