@@ -2,7 +2,9 @@ var jsonLocation = '../games(1).json',
     clickables = ["featured", "slots", "card", "table"],
     galleryUrl = 'http://cacheimg.casinomidas.com/images/www/games/minipods/',
     urlending = '-minipod.jpg';
+// loadJson = require('./loadJson');
 
+// console.log(22);
 function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
@@ -56,11 +58,11 @@ function populate(context) {
 }
 
 function openGame(game_name, game_code, machine_id, denominations, hands) {
-    console.log(game_name);
-    console.log(game_code);
-    console.log(machine_id);
-    console.log(denominations);
-    console.log(hands);
+    console.log(`game name: ${game_name}`);
+    console.log(`game code: ${game_code}`);
+    console.log(`machine id: ${machine_id}`);
+    console.log(`denominations: ${denominations}`);
+    console.log(`hands: ${hands}`);
 }
 
 function onClickParams(game) {

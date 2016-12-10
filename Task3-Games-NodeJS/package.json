@@ -1,6 +1,10 @@
 {
     "name": "gamesrendering",
     "version": "1.0.0",
+    "engines": {
+        "node": "7.1.x",
+        "npm": "3.10.x"
+    },
     "description": "task3 of the future challenge",
     "main": "index.js",
     "scripts": {
@@ -13,12 +17,15 @@
     "author": "mihail",
     "license": "ISC",
     "dependencies": {
+        "connect": "^3.5.0",
         "express": "4.14.x",
         "handlebars": "4.0.x",
         "jquery": "3.1.x",
-        "pug": "^2.0.0-beta6"
+        "pug": "^2.0.0-beta6",
+        "serve-static": "^1.11.1"
     },
     "devDependencies": {
-        "nodemon": "^1.11.0"
+        "nodemon": "^1.11.0",
+        "typings": "^2.0.0"
     }
 }
