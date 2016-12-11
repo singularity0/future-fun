@@ -35,6 +35,13 @@ class Eagle extends FlyigAnimal {
     }
 }
 
+class Bee extends FlyigAnimal {
+    constructor(age) {
+        super(age);
+    }
+}
+
+
 
 // quickTest();
 
