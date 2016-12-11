@@ -94,4 +94,26 @@ function appendResultToUrl(entry, url = galleryUrl, urlending = urlending) {
 
 $(document).ready(function() {
     $("#featured").trigger("click");
+    $("#featured").addClass("currently-clicked");
+});
+
+//swipe actions
+$(document).ready(function() {
+    console.log(1);
+    $(document).on("swipeleft swiperight", "body", function(e) {
+        if (e.type === "swipeleft") {
+            var $next = $(".currently-clicked").next();
+            $(".currently-clicked").removeClass('currently-clicked');
+            $next.addClass('currently-clicked');
+            $(".currently-clicked").trigger("click");
+            console.log(2);
+
+        } else if (e.type === "swiperight") {
+            var $next = $(".currently-clicked").prev();
+            $(".currently-clicked").removeClass('currently-clicked');
+            $next.addClass('currently-clicked');
+            $(".currently-clicked").trigger("click");
+        }
+
+    });
 });

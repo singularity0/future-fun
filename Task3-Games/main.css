@@ -58,10 +58,10 @@ tr {
     text-transform: capitalize;
     color: antiquewhite;
     /*overflow: hidden;*/
-    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
 }
 
-.galleryItem img {
+overla .galleryItem img {
     max-width: 100%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
