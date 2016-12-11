@@ -31,6 +31,8 @@ function init() {
             $clickItemElement.on('click', function() {
 
                 $(".container").html("");
+                $(".currently-clicked").removeClass('currently-clicked');
+                $(this).addClass('currently-clicked');
 
                 var category = actual_JSON[clickItem]
 
@@ -91,29 +93,36 @@ function appendResultToUrl(entry, url = galleryUrl, urlending = urlending) {
     return entireUrl;
 }
 
-//swipe actions
 $(document).ready(function() {
+
+    featuredClickByDefault();
 
     $(document).on("swipeleft swiperight", "body", function(e) {
         if (e.type === "swipeleft") {
             var $next = $(".currently-clicked").next();
-            $(".currently-clicked").removeClass('currently-clicked');
-            $next.addClass('currently-clicked');
-            $(".currently-clicked").trigger("click");
+            if ($next) {
+                $(".currently-clicked").removeClass('currently-clicked');
+                $next.addClass('currently-clicked');
+                $(".currently-clicked").trigger("click");
+            }
+
 
         } else if (e.type === "swiperight") {
             var $next = $(".currently-clicked").prev();
-            $(".currently-clicked").removeClass('currently-clicked');
-            $next.addClass('currently-clicked');
-            $(".currently-clicked").trigger("click");
+            if ($next) {
+                $(".currently-clicked").removeClass('currently-clicked');
+                $next.addClass('currently-clicked');
+                $(".currently-clicked").trigger("click");
+            }
         }
 
     });
 });
 
-$(document).ready(function() {
+function featuredClickByDefault() {
     $("#featured").trigger("click");
     $("#featured").addClass("currently-clicked");
-});
+
+}
 
 init();
