@@ -2,9 +2,8 @@ var jsonLocation = '../games(1).json',
     clickables = ["featured", "slots", "card", "table"],
     galleryUrl = 'http://cacheimg.casinomidas.com/images/www/games/minipods/',
     urlending = '-minipod.jpg';
-// loadJson = require('./loadJson');
 
-// console.log(22);
+
 function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
@@ -58,11 +57,11 @@ function populate(context) {
 }
 
 function openGame(game_name, game_code, machine_id, denominations, hands) {
-    console.log(`game name: ${game_name}`);
-    console.log(`game code: ${game_code}`);
-    console.log(`machine id: ${machine_id}`);
-    console.log(`denominations: ${denominations}`);
-    console.log(`hands: ${hands}`);
+    console.log(game_name);
+    console.log(game_code);
+    console.log(machine_id);
+    console.log(denominations);
+    console.log(hands);
 }
 
 function onClickParams(game) {
@@ -76,11 +75,9 @@ function onClickParams(game) {
         gameMachineID: game.machine_id,
         gameDenomination: game.denominations,
         gameHands: game.hands,
-        gameUrl: gameUrl
+        gameUrl
     }
 }
-
-init();
 
 function clearUppercaseAndSymbols(entry) {
 
@@ -94,6 +91,29 @@ function appendResultToUrl(entry, url = galleryUrl, urlending = urlending) {
     return entireUrl;
 }
 
+//swipe actions
+$(document).ready(function() {
+
+    $(document).on("swipeleft swiperight", "body", function(e) {
+        if (e.type === "swipeleft") {
+            var $next = $(".currently-clicked").next();
+            $(".currently-clicked").removeClass('currently-clicked');
+            $next.addClass('currently-clicked');
+            $(".currently-clicked").trigger("click");
+
+        } else if (e.type === "swiperight") {
+            var $next = $(".currently-clicked").prev();
+            $(".currently-clicked").removeClass('currently-clicked');
+            $next.addClass('currently-clicked');
+            $(".currently-clicked").trigger("click");
+        }
+
+    });
+});
+
 $(document).ready(function() {
     $("#featured").trigger("click");
+    $("#featured").addClass("currently-clicked");
 });
+
+init();
