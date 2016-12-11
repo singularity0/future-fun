@@ -1,5 +1,5 @@
 .menu {
-    overflow-x: auto;
+    /*overflow-x: auto;*/
     font-family: fantasy
 }
 
@@ -45,7 +45,7 @@ tr {
 .container {
     width: 80%;
     margin: 30px auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .galleryItem {
@@ -61,7 +61,7 @@ tr {
     /*overflow-y: hidden;*/
 }
 
-overla .galleryItem img {
+.galleryItem img {
     max-width: 100%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
