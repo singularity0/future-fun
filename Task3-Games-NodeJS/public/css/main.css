@@ -45,7 +45,7 @@ tr {
 .container {
     width: 80%;
     margin: 30px auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .galleryItem {
@@ -58,7 +58,7 @@ tr {
     text-transform: capitalize;
     color: antiquewhite;
     /*overflow: hidden;*/
-    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
 }
 
 .galleryItem img {
@@ -134,6 +134,10 @@ only screen and (max-device-width: 320px) {
     {
         font-size: 18px;
     }*/
+}
+
+.menu td {
+    cursor: pointer;
 }
 
 
